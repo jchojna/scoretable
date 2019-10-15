@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../scss/Stopwatch.scss"
+        "../scss/Player.scss"
     ],
     "names": [],
-    "file": "Stopwatch.min.css"
+    "file": "Player.css"
 }
