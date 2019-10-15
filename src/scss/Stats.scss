@@ -3,7 +3,7 @@
 @import '_mixins';
 
 .Stats {
-  text-align: right;
+  justify-self: start;
 
   &__totalPlayers {
     margin: 0;
