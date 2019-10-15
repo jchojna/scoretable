@@ -6,8 +6,10 @@ import '../scss/Player.scss';
 const Player = (props) => {
   return (
     <section className="Player">
-
-      <button className="button Player__button">
+      <button
+        className="button Player__button"
+        onClick={() => props.remove(props.id)}
+      >
         <svg className="Player__svg" viewBox="0 0 512 512">
           <use href={`${icons}#remove`}></use>
         </svg>
@@ -24,7 +26,6 @@ const Player = (props) => {
       <Counter
         score={props.score}
       />
-
     </section>
   );
 }
