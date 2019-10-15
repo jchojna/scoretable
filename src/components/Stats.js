@@ -9,14 +9,19 @@ const Stats = (props) => {
   }, 0);
 
   return (
-    <section className="Stats">
-      <p className="Stats__totalPlayers">
-        Players: {totalPlayers}
-      </p>
-      <p className="Stats__totalPoints">
-        Total Points: {totalPoints}
-      </p>
-    </section>
+    <table className="Stats">
+      <caption className="visuallyhidden">Players Stats</caption>
+      <tbody>
+        <tr className="Stats__row">
+          <th className="Stats__header" scope="row">Players Number:</th>
+          <td className="Stats__data">{totalPlayers}</td>
+        </tr>
+        <tr className="Stats__row">
+          <th className="Stats__header" scope="row">Total Points:</th>
+          <td className="Stats__data">{totalPoints}</td>
+        </tr>
+      </tbody>
+    </table>
   );
 }
 export default Stats;

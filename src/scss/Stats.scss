@@ -4,13 +4,20 @@
 
 .Stats {
   justify-self: start;
+  border-spacing: 5px;
+  border-collapse: separate;
 
-  &__totalPlayers {
-    margin: 0;
-    margin-bottom: 0.5em;
+  &__row {
+    padding: 0;
+    text-align: left;
   }
 
-  &__totalPoints {
-    margin: 0;
+  &__header {
+    font-weight: 600;
+  }
+
+  &__data {
+    font-size: 1.2em;
+    font-weight: 800;
   }
 }
