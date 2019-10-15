@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/Stopwatch.scss"
+    ],
+    "names": [],
+    "file": "Stopwatch.min.css"
+}
