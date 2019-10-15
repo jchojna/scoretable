@@ -1,3 +1,47 @@
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
 .Header {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -12,6 +56,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2em;
+  width: 100%;
+  max-width: 800px;
 }
 
 .Header__heading {
@@ -33,4 +79,3 @@
 .Header__stat:not(:last-child) {
   margin-bottom: 0.5em;
 }
-/*# sourceMappingURL=Header.css.map */

@@ -1,3 +1,7 @@
+@import '_helpers';
+@import '_variables';
+@import '_mixins';
+
 .Header {
   align-items: center;
   background-color: rgb(120, 146, 25);
@@ -6,6 +10,9 @@
   display: flex;
   justify-content: space-between;
   padding: 2em;
+  width: 100%;
+  
+  max-width: $layout-container-width;
 
   &__heading {
     font-weight: 600;
