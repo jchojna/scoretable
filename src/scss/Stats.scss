@@ -1,0 +1,16 @@
+@import '_helpers';
+@import '_variables';
+@import '_mixins';
+
+.Stats {
+  text-align: right;
+
+  &__totalPlayers {
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+
+  &__totalPoints {
+    margin: 0;
+  }
+}

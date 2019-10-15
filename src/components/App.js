@@ -41,29 +41,29 @@ class App extends Component {
       ? 0
       : { score: prevState.players[index].score += operation };
     });
-    
   }
 
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header
+          totalPlayers={this.state.players.length}
+        />
 
         {/* PLAYERS LIST */}
         {this.state.players.map((player, index) => 
           <Player
+            changeScore={this.handleScoreChange}
             id={player.id}
+            index={index}
             key={player.id.toString()}
             name={player.name}
-            score={player.score}
-            changeScore={this.handleScoreChange}
             remove={this.handleRemovePlayer}
-            index={index}
+            score={player.score}
           />
         )}
       </div>
     );
   }
 }
-
 export default App;
