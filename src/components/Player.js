@@ -1,7 +1,7 @@
 import React from 'react';
 import Counter from './Counter';
 import icons from '../assets/svg/icons.svg'
-import '../css/Player.css';
+import '../scss/Player.scss';
 
 const Player = () => {
   return (

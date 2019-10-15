@@ -1,6 +1,6 @@
 import React from 'react';
 import Stopwatch from './Stopwatch';
-import '../css/Header.css';
+import '../scss/Header.scss';
 
 function Header() {
   return (
