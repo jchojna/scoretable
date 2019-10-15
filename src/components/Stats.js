@@ -8,7 +8,7 @@ const Stats = (props) => {
         Players: {props.totalPlayers}
       </p>
       <p className="Stats__totalPoints">
-        Total Points: 0
+        Total Points: {props.totalPoints}
       </p>
     </section>
   );

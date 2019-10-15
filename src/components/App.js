@@ -48,6 +48,9 @@ class App extends Component {
       <div className="App">
         <Header
           totalPlayers={this.state.players.length}
+          totalPoints={this.state.players.reduce(
+            (a,b) => a + b.score, 0
+          )}
         />
 
         {/* PLAYERS LIST */}
