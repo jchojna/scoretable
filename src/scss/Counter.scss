@@ -1,0 +1,8 @@
+@import '_helpers';
+@import '_variables';
+@import '_mixins';
+
+.Counter {
+  @include flex-center;
+  background-color: rgb(196, 214, 130);
+}
