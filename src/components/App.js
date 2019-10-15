@@ -35,19 +35,30 @@ class App extends Component {
     }));
   }
 
+  handleScoreChange = (index, operation) => {
+    this.setState(prevState => {
+      return operation === -1 && this.state.players[index].score <= 0
+      ? 0
+      : { score: prevState.players[index].score += operation };
+    });
+    
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
 
         {/* PLAYERS LIST */}
-        {this.state.players.map(player => 
+        {this.state.players.map((player, index) => 
           <Player
             id={player.id}
             key={player.id.toString()}
             name={player.name}
             score={player.score}
+            changeScore={this.handleScoreChange}
             remove={this.handleRemovePlayer}
+            index={index}
           />
         )}
       </div>
