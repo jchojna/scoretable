@@ -20,7 +20,7 @@ class App extends Component {
             id={player.id}
             key={player.id.toString()}
             name={player.name}
-
+            score={player.score}
           />
         )}
       </div>
