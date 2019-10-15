@@ -13,9 +13,7 @@ const Counter = (props) => {
         </svg>
       </button>
 
-      <p className="Counter__score">
-        {props.score}
-      </p>
+      <p className="Counter__score">{props.score}</p>
 
       <button className="button Counter__button Counter__button--js-plus">
         <svg className="Counter__svg" viewBox="0 0 512 512">

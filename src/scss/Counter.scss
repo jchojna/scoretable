@@ -5,15 +5,18 @@
 .Counter {
   @include flex-center;
   justify-content: space-between;
+  align-items: center;
 
   &__score {
     font-size: 1.5em;
     font-weight: 800;
+    margin: 0;
   }
 
   &__button {
-    fill: rgb(193, 221, 91);
-    width: $size-counter-button;
+    fill: $fill-button;
+    padding: 0;
+    width: $size-player-button;
 
     &:hover {
       fill: #fff;
