@@ -5,10 +5,13 @@
 .Player {
   align-items: stretch;
   background-color: rgb(169, 202, 50);
+  border-radius: 10px;
   color: #fff;
   display: grid;
   grid-template-columns: 80px 1fr 200px;
   max-width: $layout-container-width;
+  margin-top: 1em;
+  overflow: hidden;
   width: 100%;
 
   &__crown {
@@ -21,6 +24,7 @@
     align-items: center;
     display: flex;
     font-size: 1.5em;
+    font-weight: 600;
     margin: 0;
     padding: 20px;
   }

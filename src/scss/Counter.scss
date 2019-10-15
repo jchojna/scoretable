@@ -4,5 +4,23 @@
 
 .Counter {
   @include flex-center;
-  background-color: rgb(196, 214, 130);
+  justify-content: space-between;
+
+  &__result {
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+
+  &__button {
+    fill: rgb(193, 221, 91);
+    width: $size-counter-button;
+
+    &:hover {
+      fill: #fff;
+    }
+  }
+
+  &__svg {
+    width: 100%;
+  }
 }
