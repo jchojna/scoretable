@@ -7,8 +7,7 @@ function Header(props) {
   return (
     <header className="Header">
       <Stats
-        totalPlayers={props.totalPlayers}
-        totalPoints={props.totalPoints}
+        players={props.players}
       />
       <h1 className="Header__heading">Score Table</h1>
       <Stopwatch />

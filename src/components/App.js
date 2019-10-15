@@ -36,21 +36,20 @@ class App extends Component {
   }
 
   handleScoreChange = (index, operation) => {
+    const {players} = this.state;
     this.setState(prevState => {
-      return operation === -1 && this.state.players[index].score <= 0
+      return operation === -1 && players[index].score <= 0
       ? 0
       : { score: prevState.players[index].score += operation };
     });
   }
 
   render() {
+    const {players} = this.state;
     return (
       <div className="App">
         <Header
-          totalPlayers={this.state.players.length}
-          totalPoints={this.state.players.reduce(
-            (a,b) => a + b.score, 0
-          )}
+          players={players}
         />
 
         {/* PLAYERS LIST */}
