@@ -10,7 +10,7 @@ const Counter = () => {
           <use href={`${plus}#minus`}></use>
         </svg>
       </button>
-      <p className="Counter__result">
+      <p className="Counter__score">
         14
       </p>
       <button className="button Counter__button Counter__button--js-plus">
