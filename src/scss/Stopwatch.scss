@@ -16,12 +16,26 @@
     grid-column: 1 / span 2;
   }
   
-  &__time {
+  &__display {
+    display: flex;
+    justify-content: space-between;
     grid-column: 1 / span 2;
     font-size: 2em;
     font-weight: 800;
     margin: 0.3em 0;
+  }
 
+  &__time {
+    position: relative;
+    text-align: center;
+    width: 2em;
+
+    &:not(:last-child)::after {
+      content: ":";
+      position: absolute;
+      right: -6px;
+      top: 0;
+    }
   }
 
   &__button {

@@ -9,11 +9,15 @@ class Stopwatch extends Component {
   }
 
   componentDidMount() {
-    this.intervalId = setInterval(() => this.ticking(), 100);
+    this.intervalId = setInterval(() => this.ticking(), 10);
   }
 
   componentWillUnmount() {
     clearInterval(this.intervalId);
+  }
+
+  setTwoDigital = (number) => {
+    return number < 10 ? `0${number}` : number;
   }
 
   ticking = () => {
@@ -40,12 +44,18 @@ class Stopwatch extends Component {
 
   render() {
     const {isRunning, totalTime} = this.state;
-    const totalTimeInMin = Math.floor(totalTime / 1000);
+    const minutes = this.setTwoDigital(Math.floor(totalTime / 60000) % 60);
+    const seconds = this.setTwoDigital(Math.floor(totalTime / 1000) % 60);
+    const cSeconds = this.setTwoDigital(Math.floor(totalTime / 10) % 100);
 
     return (
       <section className="Stopwatch">
         <h2 className="Stopwatch__header">Stopwatch</h2>
-        <span className="Stopwatch__time">{totalTimeInMin}</span>
+        <div className="Stopwatch__display">
+          <span className="Stopwatch__time">{minutes}</span>
+          <span className="Stopwatch__time">{seconds}</span>
+          <span className="Stopwatch__time">{cSeconds}</span>
+        </div>
         <button
           className="Stopwatch__button Stopwatch__button--start"
           onClick={this.handleStopwatch}
