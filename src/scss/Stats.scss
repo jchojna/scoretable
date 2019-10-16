@@ -3,9 +3,10 @@
 @import '_mixins';
 
 .Stats {
-  justify-self: start;
-  border-spacing: 5px;
+  @include flex-center;
+  border-spacing: 10px;
   border-collapse: separate;
+  justify-self: start;
 
   &__row {
     padding: 0;
