@@ -3,7 +3,7 @@ import Stats from './Stats';
 import Stopwatch from './Stopwatch';
 import '../scss/Header.scss';
 
-function Header(props) {
+const Header = (props) => {
   return (
     <header className="Header">
       <Stats
@@ -14,5 +14,4 @@ function Header(props) {
     </header>
   );
 }
-
 export default Header;

@@ -1,3 +1,53 @@
-.Stopwach {
+@import '_helpers';
+@import '_variables';
+@import '_mixins';
+
+.Stopwatch {
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+
+  &__header {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    grid-column: 1 / span 2;
+  }
   
+  &__display {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 / span 2;
+    font-size: 2em;
+    font-weight: 800;
+    margin: 0.3em 0;
+  }
+
+  &__time {
+    position: relative;
+    text-align: center;
+    width: 2em;
+
+    &:not(:last-child)::after {
+      content: ":";
+      position: absolute;
+      right: -6px;
+      top: 0;
+    }
+  }
+
+  &__button {
+    color: $color-background;
+    font-size: 1em;
+    font-weight: 800;
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: $color-button;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
 }
