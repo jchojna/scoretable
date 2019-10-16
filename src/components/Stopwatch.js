@@ -16,15 +16,6 @@ class Stopwatch extends Component {
     clearInterval(this.intervalId);
   }
 
-  handleStopwatch = () => {
-    const { isRunning } = this.state;
-    this.setState(prevState => ({
-      isRunning: !prevState.isRunning
-    }));
-
-    if (!isRunning) this.setState({ previousTime: Date.now() });
-  }
-
   ticking = () => {
     if (this.state.isRunning) {
       const now = Date.now();
@@ -35,6 +26,17 @@ class Stopwatch extends Component {
       }));
     }
   }
+
+  handleStopwatch = () => {
+    const { isRunning } = this.state;
+    this.setState(prevState => ({
+      isRunning: !prevState.isRunning
+    }));
+
+    if (!isRunning) this.setState({ previousTime: Date.now() });
+  }
+
+  handleReset = () => this.setState({ totalTime: 0 });
 
   render() {
     const {isRunning, totalTime} = this.state;
@@ -52,6 +54,7 @@ class Stopwatch extends Component {
         </button>
         <button
           className="Stopwatch__button Stopwatch__button--reset"
+          onClick={this.handleReset}
         >
           Reset
         </button>
