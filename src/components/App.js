@@ -46,7 +46,8 @@ class App extends Component {
   }
 
   handlePlayerAddition = (name) => {
-    const id = this.state.players.length + 1;
+    const { players } = this.state;
+    const id = parseInt(players[players.length-1].id) + 1;
     this.setState((prevState) => ({
         players: [...prevState.players,
           { id, name, score: 0 }

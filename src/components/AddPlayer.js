@@ -11,12 +11,14 @@ class AddPlayer extends Component {
   }
 
   handleSubmit = (e) => {
+    const { newPlayer } = this.state;
     e.preventDefault();
-    this.props.addPlayer(this.state.newPlayer);
+    this.props.addPlayer(newPlayer);
     this.setState({ newPlayer: '' })
   }
 
   render() {
+    const { newPlayer } = this.state;
     return (
       <form
         className="AddPlayer"
@@ -27,7 +29,7 @@ class AddPlayer extends Component {
           onChange={this.handleAddPlayer}
           placeholder="New Player's Name"
           type="text"
-          value={this.state.newPlayer}
+          value={newPlayer}
         />
         <input
           className="AddPlayer__input AddPlayer__input--button"
