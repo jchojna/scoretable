@@ -45,6 +45,15 @@ class App extends Component {
     });
   }
 
+  handlePlayerAddition = (name) => {
+    const id = this.state.players.length + 1;
+    this.setState((prevState) => ({
+        players: [...prevState.players,
+          { id, name, score: 0 }
+        ]
+    }));
+  }
+
   render() {
     const {players} = this.state;
     return (
@@ -66,7 +75,9 @@ class App extends Component {
           />
         )}
 
-        <AddPlayer />
+        <AddPlayer
+          addPlayer={this.handlePlayerAddition}
+        />
       </div>
     );
   }
