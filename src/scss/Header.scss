@@ -3,17 +3,16 @@
 @import '_mixins';
 
 .Header {
+  align-items: center;
   background-color: rgb(120, 146, 25);
   border-radius: 10px;
   color: #fff;
   display: grid;
   grid-template-columns: 25% 1fr 25%;
-  align-items: center;
   justify-items: center;
+  max-width: $layout-container-width;
   padding: 2em;
   width: 100%;
-  
-  max-width: $layout-container-width;
 
   &__heading {
     font-weight: 600;

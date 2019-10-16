@@ -11,6 +11,7 @@ class AddPlayer extends Component {
       <form className="AddPlayer">
         <input
           className="AddPlayer__input AddPlayer__input--text"
+          placeholder="New Player's Name"
           type="text"
         />
         <input
