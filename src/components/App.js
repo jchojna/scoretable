@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import Player from './Player';
+import AddPlayer from './AddPlayer';
 import '../scss/App.scss';
 
 class App extends Component {
@@ -64,6 +65,8 @@ class App extends Component {
             score={player.score}
           />
         )}
+
+        <AddPlayer />
       </div>
     );
   }
