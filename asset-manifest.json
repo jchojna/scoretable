@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/jchojna/scoretable.git/static/css/main.c16ea7af.chunk.css",
-    "main.js": "/jchojna/scoretable.git/static/js/main.b54a3a41.chunk.js",
-    "main.js.map": "/jchojna/scoretable.git/static/js/main.b54a3a41.chunk.js.map",
-    "runtime-main.js": "/jchojna/scoretable.git/static/js/runtime-main.fb2c5723.js",
-    "runtime-main.js.map": "/jchojna/scoretable.git/static/js/runtime-main.fb2c5723.js.map",
-    "static/js/2.ada67982.chunk.js": "/jchojna/scoretable.git/static/js/2.ada67982.chunk.js",
-    "static/js/2.ada67982.chunk.js.map": "/jchojna/scoretable.git/static/js/2.ada67982.chunk.js.map",
-    "index.html": "/jchojna/scoretable.git/index.html",
-    "precache-manifest.9517836855e0dc521d1cb1a1234bd4fb.js": "/jchojna/scoretable.git/precache-manifest.9517836855e0dc521d1cb1a1234bd4fb.js",
-    "service-worker.js": "/jchojna/scoretable.git/service-worker.js",
-    "static/css/main.c16ea7af.chunk.css.map": "/jchojna/scoretable.git/static/css/main.c16ea7af.chunk.css.map",
-    "static/media/icons.svg": "/jchojna/scoretable.git/static/media/icons.4fff1f6e.svg"
+    "main.css": "/scoretable/static/css/main.c16ea7af.chunk.css",
+    "main.js": "/scoretable/static/js/main.6888adca.chunk.js",
+    "main.js.map": "/scoretable/static/js/main.6888adca.chunk.js.map",
+    "runtime-main.js": "/scoretable/static/js/runtime-main.621c05c0.js",
+    "runtime-main.js.map": "/scoretable/static/js/runtime-main.621c05c0.js.map",
+    "static/js/2.ada67982.chunk.js": "/scoretable/static/js/2.ada67982.chunk.js",
+    "static/js/2.ada67982.chunk.js.map": "/scoretable/static/js/2.ada67982.chunk.js.map",
+    "index.html": "/scoretable/index.html",
+    "precache-manifest.762e8fb0a3ab0c236d7760d2e2eb952d.js": "/scoretable/precache-manifest.762e8fb0a3ab0c236d7760d2e2eb952d.js",
+    "service-worker.js": "/scoretable/service-worker.js",
+    "static/css/main.c16ea7af.chunk.css.map": "/scoretable/static/css/main.c16ea7af.chunk.css.map",
+    "static/media/icons.svg": "/scoretable/static/media/icons.4fff1f6e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fb2c5723.js",
+    "static/js/runtime-main.621c05c0.js",
     "static/js/2.ada67982.chunk.js",
     "static/css/main.c16ea7af.chunk.css",
-    "static/js/main.b54a3a41.chunk.js"
+    "static/js/main.6888adca.chunk.js"
   ]
 }
