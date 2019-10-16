@@ -30,6 +30,7 @@ class AddPlayer extends Component {
           placeholder="New Player's Name"
           type="text"
           value={newPlayer}
+          required
         />
         <input
           className="AddPlayer__input AddPlayer__input--button"
