@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Stopwatch.css';
+import '../scss/Stopwatch.scss';
 
 function Stopwatch() {
   return (

@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap');
 
+@import 'normalize.css';
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', "Segoe UI", "Roboto", "Oxygen",
@@ -12,4 +25,11 @@ body {
 code {
   font-family: 'source-code-pro, Menlo, Monaco, Consolas', "Courier New",
     monospace;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
 }

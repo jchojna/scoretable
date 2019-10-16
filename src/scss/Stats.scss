@@ -1,0 +1,23 @@
+@import '_helpers';
+@import '_variables';
+@import '_mixins';
+
+.Stats {
+  justify-self: start;
+  border-spacing: 5px;
+  border-collapse: separate;
+
+  &__row {
+    padding: 0;
+    text-align: left;
+  }
+
+  &__header {
+    font-weight: 600;
+  }
+
+  &__data {
+    font-size: 1.2em;
+    font-weight: 800;
+  }
+}
