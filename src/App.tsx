@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import Header from './components/Header';
 import { Player } from './components/Player';
 
 import './App.css';
@@ -37,8 +38,7 @@ const state = {
 function App() {
   const [players, setPlayers] = useState(state.players);
 
-  // handle removing player with use of useState
-  const removePlayer = (id) => {
+  const removePlayer = (id: string) => {
     setPlayers((prevState) => prevState.filter((a) => a.id !== id));
   };
 
@@ -55,6 +55,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header players={players} />
       {players.map(({ id, name, score }, index) => (
         <Player
           id={id}
@@ -73,15 +74,6 @@ function App() {
 export default App;
 
 // class App extends Component {
-
-//   handleScoreChange = (index, operation) => {
-//     const { players } = this.state;
-//     this.setState((prevState) => {
-//       return operation === -1 && players[index].score <= 0
-//         ? 0
-//         : { score: (prevState.players[index].score += operation) };
-//     });
-//   };
 
 //   handlePlayerAddition = (name) => {
 //     const { players } = this.state;

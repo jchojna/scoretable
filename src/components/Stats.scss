@@ -1,23 +1,24 @@
-@import '_helpers';
-@import '_variables';
-@import '_mixins';
+@import '../styles/helpers';
+@import '../styles/variables';
+@import '../styles/mixins';
 
-.Stats {
+.stats {
   @include flex-center;
+
   border-spacing: 10px;
   border-collapse: separate;
   justify-self: start;
 
-  &__row {
+  .row {
     padding: 0;
     text-align: left;
   }
 
-  &__header {
+  .header {
     font-weight: 600;
   }
 
-  &__data {
+  .data {
     font-size: 1.2em;
     font-weight: 800;
   }

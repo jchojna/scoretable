@@ -1,17 +1,15 @@
-import React from 'react';
 import Stats from './Stats';
 import Stopwatch from './Stopwatch';
-import '../scss/Header.scss';
+import './Header.scss';
 
-const Header = (props) => {
+function Header({ players }) {
   return (
     <header className="Header">
-      <Stats
-        players={props.players}
-      />
+      <Stats players={players} />
       <h1 className="Header__heading">Score Table</h1>
       <Stopwatch />
     </header>
   );
 }
+
 export default Header;
