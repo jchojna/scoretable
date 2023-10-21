@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 import Header from './components/Header';
-import { Player } from './components/Player';
+import Player from './components/Player';
+import AddPlayer from './components/AddPlayer';
 
 import './App.css';
 
@@ -35,8 +36,13 @@ const state = {
   ],
 };
 
-function App() {
+const App = () => {
   const [players, setPlayers] = useState(state.players);
+
+  const handlePlayerAddition = (name: string) => {
+    const id = parseInt(players[players.length - 1].id) + 1;
+    setPlayers((prevState) => [...prevState, { id, name, score: 0 }]);
+  };
 
   const removePlayer = (id: string) => {
     setPlayers((prevState) => prevState.filter((a) => a.id !== id));
@@ -62,48 +68,14 @@ function App() {
           key={id.toString()}
           index={index}
           name={name}
-          score={players[index].score}
+          score={score}
           changeScore={handleScoreChange}
           removePlayer={removePlayer}
         />
       ))}
+      <AddPlayer addPlayer={handlePlayerAddition} />
     </div>
   );
-}
+};
 
 export default App;
-
-// class App extends Component {
-
-//   handlePlayerAddition = (name) => {
-//     const { players } = this.state;
-//     const id = parseInt(players[players.length - 1].id) + 1;
-//     this.setState((prevState) => ({
-//       players: [...prevState.players, { id, name, score: 0 }],
-//     }));
-//   };
-
-//   render() {
-//     const { players } = this.state;
-//     return (
-//       <div className="App">
-//         <Header players={players} />
-
-//         {/* PLAYERS LIST */}
-//         {this.state.players.map((player, index) => (
-//           <Player
-//             changeScore={this.handleScoreChange}
-//             id={player.id}
-//             index={index}
-//             key={player.id.toString()}
-//             name={player.name}
-//             remove={this.handleRemovePlayer}
-//             score={player.score}
-//           />
-//         ))}
-
-//         <AddPlayer addPlayer={this.handlePlayerAddition} />
-//       </div>
-//     );
-//   }
-// }

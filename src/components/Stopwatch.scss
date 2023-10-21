@@ -2,21 +2,21 @@
 @import '../styles/variables';
 @import '../styles/mixins';
 
-.Stopwatch {
+.stopwatch {
   align-self: stretch;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   width: 100%;
 
-  &__header {
+  .header {
     margin: 0;
     font-size: 1.2em;
     font-weight: 600;
     grid-column: 1 / span 2;
   }
 
-  &__display {
+  .display {
     display: flex;
     justify-content: space-between;
     grid-column: 1 / span 2;
@@ -25,7 +25,7 @@
     margin: 0.3em 0;
   }
 
-  &__time {
+  .time {
     position: relative;
     text-align: center;
     width: 2em;
@@ -38,7 +38,7 @@
     }
   }
 
-  &__button {
+  .button {
     color: $color-background;
     font-size: 1em;
     font-weight: 800;

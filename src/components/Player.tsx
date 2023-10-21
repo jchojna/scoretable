@@ -2,7 +2,7 @@ import icons from '../assets/svg/icons.svg';
 import Counter from './Counter';
 import './Player.scss';
 
-export function Player({ id, index, name, score, changeScore, removePlayer }) {
+const Player = ({ id, index, name, score, changeScore, removePlayer }) => {
   return (
     <div className="player">
       <button
@@ -23,4 +23,6 @@ export function Player({ id, index, name, score, changeScore, removePlayer }) {
       <Counter index={index} score={score} changeScore={changeScore} />
     </div>
   );
-}
+};
+
+export default Player;

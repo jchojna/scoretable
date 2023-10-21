@@ -8,13 +8,12 @@ const setTwoDigital = (number: number) => {
 const Stopwatch = () => {
   const [isRunning, setRunning] = useState(false);
   const [totalTime, setTotalTime] = useState(0);
-
+  const INTERVAL: number = 10;
   const minutes = setTwoDigital(Math.floor(totalTime / 60000) % 60);
   const seconds = setTwoDigital(Math.floor(totalTime / 1000) % 60);
-  const cSeconds = setTwoDigital(Math.floor(totalTime / 10) % 100);
+  const ms = setTwoDigital(Math.floor(totalTime / INTERVAL) % 100);
 
   useEffect(() => {
-    const INTERVAL: number = 10;
     let timerId;
 
     const ticking = () => {
@@ -36,7 +35,7 @@ const Stopwatch = () => {
       <div className="display">
         <span className="time">{minutes}</span>
         <span className="time">{seconds}</span>
-        <span className="time">{cSeconds}</span>
+        <span className="time">{ms}</span>
       </div>
       <button
         className="button button--start"
@@ -45,7 +44,7 @@ const Stopwatch = () => {
         {isRunning ? 'Stop' : 'Start'}
       </button>
       <button
-        className="Stopwatch__button Stopwatch__button--reset"
+        className="button button--reset"
         onClick={() => {
           setTotalTime(0);
         }}
