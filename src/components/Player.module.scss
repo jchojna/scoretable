@@ -15,7 +15,9 @@
   padding: 1em;
   width: 100%;
 
-  &__button {
+  .button {
+    background: none;
+    border: none;
     fill: $color-button;
     padding: 0;
     width: $size-player-button;
@@ -23,18 +25,18 @@
     &:hover {
       fill: #fff;
     }
+
+    .svg {
+      width: 100%;
+    }
   }
 
-  &__svg {
-    width: 100%;
-  }
-
-  &__crown {
+  .crown {
     fill: $color-button;
     width: $size-player-button;
   }
 
-  &__heading {
+  .heading {
     align-items: center;
     display: flex;
     font-size: 1.5em;

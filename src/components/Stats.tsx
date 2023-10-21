@@ -1,4 +1,4 @@
-import './Stats.scss';
+import style from './Stats.module.scss';
 
 const Stats = ({ players }) => {
   const totalPlayers = players.length;
@@ -7,20 +7,20 @@ const Stats = ({ players }) => {
   }, 0);
 
   return (
-    <table className="stats">
+    <table className={style.stats}>
       <caption className="visuallyhidden">Players Stats</caption>
       <tbody>
-        <tr className="row">
-          <th className="header" scope="row">
+        <tr className={style.row}>
+          <th className={style.header} scope="row">
             Players Number:
           </th>
-          <td className="data">{totalPlayers}</td>
+          <td className={style.data}>{totalPlayers}</td>
         </tr>
-        <tr className="row">
-          <th className="header" scope="row">
+        <tr className={style.row}>
+          <th className={style.header} scope="row">
             Total Points:
           </th>
-          <td className="data">{totalPoints}</td>
+          <td className={style.data}>{totalPoints}</td>
         </tr>
       </tbody>
     </table>

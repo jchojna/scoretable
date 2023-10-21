@@ -2,18 +2,20 @@
 @import '../styles/variables';
 @import '../styles/mixins';
 
-.Counter {
+.counter {
   @include flex-center;
   justify-content: space-between;
   align-items: center;
 
-  &__score {
+  .score {
     font-size: 1.5em;
     font-weight: 800;
     margin: 0;
   }
 
-  &__button {
+  .button {
+    background: none;
+    border: none;
     fill: $color-button;
     padding: 0;
     width: $size-player-button;
@@ -21,9 +23,9 @@
     &:hover {
       fill: #fff;
     }
-  }
 
-  &__svg {
-    width: 100%;
+    .svg {
+      width: 100%;
+    }
   }
 }
