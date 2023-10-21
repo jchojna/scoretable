@@ -37,17 +37,33 @@ const state = {
 function App() {
   const [players, setPlayers] = useState(state.players);
 
+  // handle removing player with use of useState
+  const removePlayer = (id) => {
+    setPlayers((prevState) => prevState.filter((a) => a.id !== id));
+  };
+
+  const handleScoreChange = (index: number, operation: number) => {
+    setPlayers((prevState) => {
+      return prevState.map((player, i) => {
+        if (i === index) {
+          return { ...player, score: Math.max(0, player.score + operation) };
+        }
+        return player;
+      });
+    });
+  };
+
   return (
     <div className="App">
       {players.map(({ id, name, score }, index) => (
         <Player
-          // changeScore={this.handleScoreChange}
           id={id}
           key={id.toString()}
           index={index}
           name={name}
-          // remove={this.handleRemovePlayer}
-          score={score}
+          score={players[index].score}
+          changeScore={handleScoreChange}
+          removePlayer={removePlayer}
         />
       ))}
     </div>
@@ -57,12 +73,6 @@ function App() {
 export default App;
 
 // class App extends Component {
-
-//   handleRemovePlayer = (id) => {
-//     this.setState((prevState) => ({
-//       players: prevState.players.filter((a) => a.id !== id),
-//     }));
-//   };
 
 //   handleScoreChange = (index, operation) => {
 //     const { players } = this.state;

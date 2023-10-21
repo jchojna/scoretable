@@ -1,13 +1,13 @@
-// import Counter from '../../legacy/src/components/Counter';
 import icons from '../assets/svg/icons.svg';
+import Counter from './Counter';
 import './Player.scss';
 
-export function Player({ id, name, score }) {
+export function Player({ id, index, name, score, changeScore, removePlayer }) {
   return (
     <div className="player">
       <button
         className="button player__button"
-        // onClick={() => props.remove(props.id)}
+        onClick={() => removePlayer(id)}
       >
         <svg className="player__svg" viewBox="0 0 512 512">
           <use href={`${icons}#remove`}></use>
@@ -20,11 +20,7 @@ export function Player({ id, name, score }) {
 
       <h2 className="Player__heading">{name}</h2>
 
-      {/* <Counter
-        score={props.score}
-        changeScore={props.changeScore}
-        index={props.index}
-      /> */}
+      <Counter index={index} score={score} changeScore={changeScore} />
     </div>
   );
 }
