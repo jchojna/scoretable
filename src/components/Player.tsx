@@ -1,8 +1,16 @@
 import icons from '../assets/svg/icons.svg';
 import Counter from './Counter';
+
 import style from './Player.module.scss';
 
-const Player = ({ id, index, name, score, changeScore, removePlayer }) => {
+const Player = ({
+  id,
+  index,
+  name,
+  score,
+  changeScore,
+  removePlayer,
+}: PlayerProps) => {
   return (
     <div className={style.player}>
       <button className={style.button} onClick={() => removePlayer(id)}>

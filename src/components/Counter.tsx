@@ -2,7 +2,7 @@ import icons from '../assets/svg/icons.svg';
 
 import style from './Counter.module.scss';
 
-const Counter = ({ index, score, changeScore }) => {
+const Counter = ({ index, score, changeScore }: CounterProps) => {
   return (
     <div className={style.counter}>
       <button className={style.button} onClick={() => changeScore(index, -1)}>

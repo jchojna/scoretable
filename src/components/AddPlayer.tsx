@@ -2,10 +2,10 @@ import { useState } from 'react';
 
 import style from './AddPlayer.module.scss';
 
-const AddPlayer = ({ addPlayer }) => {
+const AddPlayer = ({ addPlayer }: AddPlayerProps) => {
   const [newPlayer, setNewPlayer] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     addPlayer(newPlayer);
     setNewPlayer('');

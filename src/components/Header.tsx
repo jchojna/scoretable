@@ -3,7 +3,7 @@ import Stopwatch from './Stopwatch';
 
 import style from './Header.module.scss';
 
-const Header = ({ players }) => {
+const Header = ({ players }: PlayersProps) => {
   return (
     <header className={style.header}>
       <Stats players={players} />

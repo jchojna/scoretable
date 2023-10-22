@@ -1,8 +1,8 @@
 import style from './Stats.module.scss';
 
-const Stats = ({ players }) => {
+const Stats = ({ players }: PlayersProps) => {
   const totalPlayers = players.length;
-  const totalPoints = players.reduce((total, player) => {
+  const totalPoints = players.reduce((total: number, player: Player) => {
     return total + player.score;
   }, 0);
 

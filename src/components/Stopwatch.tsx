@@ -1,22 +1,24 @@
 import { useEffect, useState } from 'react';
+
 import styles from './Stopwatch.module.scss';
 
-const setTwoDigital = (number: number) => {
-  return number < 10 ? `0${number}` : number;
+const setTwoDigital = (number: number): string => {
+  return number < 10 ? `0${number}` : number.toString();
 };
 
 const Stopwatch = () => {
   const [isRunning, setRunning] = useState(false);
   const [totalTime, setTotalTime] = useState(0);
+
   const INTERVAL: number = 10;
-  const minutes = setTwoDigital(Math.floor(totalTime / 60000) % 60);
-  const seconds = setTwoDigital(Math.floor(totalTime / 1000) % 60);
-  const ms = setTwoDigital(Math.floor(totalTime / INTERVAL) % 100);
+  const minutes: string = setTwoDigital(Math.floor(totalTime / 60000) % 60);
+  const seconds: string = setTwoDigital(Math.floor(totalTime / 1000) % 60);
+  const ms: string = setTwoDigital(Math.floor(totalTime / INTERVAL) % 100);
 
   useEffect(() => {
-    let timerId;
+    let timerId: NodeJS.Timeout | undefined;
     const ticking = () => {
-      setTotalTime((prevState) => prevState + INTERVAL);
+      setTotalTime((totalTime) => totalTime + INTERVAL);
     };
     if (isRunning) {
       timerId = setInterval(() => ticking(), INTERVAL);
@@ -36,7 +38,7 @@ const Stopwatch = () => {
       </div>
       <button
         className={styles.button}
-        onClick={() => setRunning((prevState) => !prevState)}
+        onClick={() => setRunning((isRunning) => !isRunning)}
       >
         {isRunning ? 'Stop' : 'Start'}
       </button>
